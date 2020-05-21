@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block body_block %}
+<h1>This is Home page</h1>
+<h5>This is a sample customer bookmark project</h5>
+<p>
+In this customer bookmark project I have created three models called
+</p>
+  <ol>
+    <li>customer_profile</li>
+    <li>Bookmark</li>
+    <li>customer_bookmark</li>
+  </ol>
+
+  <p>
+    In the navbar we have all three model details <br>
+    In the first two models we have option to do CRUD(Create, Read, Update and Delete) operations <br>
+    In the third model we have first two tables records along with that search option, <br>
+    The search option will retrieve records from the table what you want exactly. <br>
+    The final option we have admin on the right side of navbar feel free to login superuser <br>
+    Username : Admin <br>
+    Password : password <br>
+   </p>
+
+
+<h6>In the customer_profile model</h6>
+
+  we have given four fileds called
+
+<ul>
+  <li>customer_fname</li>
+  <li>customer_lname</li>
+  <li>lat (Latitude)</li>
+  <li>lon (Longitude)</li>
+</ul>
+
+<h6>In the Bookmark model</h6>
+
+  we have given five fileds called
+
+<ul>
+  <li>Title</li>
+  <li>URL</li>
+  <li>source_name</li>
+  <li>pub_date</li>
+  <li>customer (ManyToManyField)</li>
+</ul>
+<h6>In the customer_bookmark model</h6>
+
+  we have given two fileds called
+
+<ul>
+  <li>cb_customer_id (ForeignKey)</li>
+  <li>cb_bookmark_id (ForeignKey)</li>
+</ul>
+
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Welcome to the Customer Detail Page</h1>
+    <p>Id_num: {{cust_dv.id}}</p>
+    <p>First_Name: {{cust_dv.customer_fname}}</p>
+    <p>Last_Name: {{cust_dv.customer_lname}}</p>
+    <p>Latitude: {{cust_dv.lat}}</p>
+    <p>Longitude: {{cust_dv.lon}}</p>
+    <a class='btn btn-warning' href="{% url 'CB_app:update' pk=cust_dv.pk %}">Update </a>
+    <a class='btn btn-danger' href="{% url 'CB_app:delete' pk=cust_dv.pk %}">delete </a>
+    <a class="btn btn-secondary" href={% url 'CB_app:customer' %}>Cancel</a>
+  </div>
+
+{% endblock %}

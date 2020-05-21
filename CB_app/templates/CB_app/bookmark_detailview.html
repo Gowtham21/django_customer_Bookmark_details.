@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Welcome to the Bookmark Detail Page</h1>
+    <p>Id_num: {{bdv.id}}</p>
+    <p>Title: {{bdv.title}}</p>
+    <p>URL: {{bdv.url}}</p>
+    <p>Source Name: {{bdv.source_name}}</p>
+    <p>Publish Date: {{bdv.pub_date}}</p>
+    <a class='btn btn-warning' href="{% url 'CB_app:b_update' pk=bdv.pk %}">Update </a>
+    <a class='btn btn-danger' href="{% url 'CB_app:b_delete' pk=bdv.pk %}">Delete </a>
+    <a class="btn btn-secondary" href={% url 'CB_app:bookmark' %}>Cancel</a>
+
+  </div>
+{% endblock %}

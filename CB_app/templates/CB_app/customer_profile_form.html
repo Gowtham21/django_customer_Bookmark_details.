@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<h1>
+  {% if not form.instance.pk %}
+  Create Customer
+  {% else %}
+  Update Customer
+  {% endif %}
+
+</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class='btn btn-primary' value="ADD">
+    <a class="btn btn-secondary" href={% url 'CB_app:customer' %}>Cancel</a>
+  </form>
+{% endblock %}
