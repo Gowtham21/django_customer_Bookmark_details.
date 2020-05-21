@@ -7,8 +7,6 @@ from django.views.generic import View,TemplateView,ListView,DetailView
 
 from django.db.models import Q
 
-import pymysql.cursors
-import sqlite3
 # Create your views here.
 class IndexView(TemplateView):
     template_name = 'index.html'
